@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No Name Hospitality Group | Locations Preview</title>
+  <meta name="description" content="Interactive white-theme website preview for No Name Hospitality Group." />
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="No Name Hospitality Group home">
+      <span class="brand-mark">NN</span>
+      <span>No Name Hospitality Group</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#top">Home</a>
+      <a class="active" href="#locations">Locations</a>
+      <a href="#strategy">Brands</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="portal-button" href="#investor">Investor Portal</a>
+    <button class="mobile-toggle" type="button" aria-label="Open navigation">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Restaurant Group • Philadelphia, PA</p>
+        <h1>Hospitality destinations, elevated.</h1>
+        <p class="hero-text">
+          A polished digital home for No Name Hospitality Group, designed to showcase every location,
+          connect each restaurant website, and present the group with a refined investor-ready experience.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#locations">Explore Locations</a>
+          <a class="button secondary" href="#contact">Book a Consultation</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Featured restaurant ambiance">
+        <div class="stat-card">
+          <strong>4</strong>
+          <span>Featured Locations</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations" class="locations-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Interactive Directory</p>
+          <h2>Locations</h2>
+        </div>
+        <p class="section-note">Search, filter, and connect each card to a live website when ready.</p>
+      </div>
+
+      <div class="toolbar" role="region" aria-label="Location filters">
+        <label class="search-box">
+          <span>Search locations</span>
+          <input id="searchInput" type="search" placeholder="Search Frame, Revolution House, Luna Marre..." />
+        </label>
+
+        <label class="select-box">
+          <span>Cuisine / Concept</span>
+          <select id="conceptFilter">
+            <option value="all">All Concepts</option>
+            <option value="american">American</option>
+            <option value="steakhouse">Steakhouse</option>
+            <option value="mediterranean">Mediterranean</option>
+          </select>
+        </label>
+
+        <div class="segmented" aria-label="Status filter">
+          <button class="segment active" data-status="all" type="button">All</button>
+          <button class="segment" data-status="open" type="button">Open</button>
+          <button class="segment" data-status="featured" type="button">Featured</button>
+        </div>
+      </div>
+
+      <div id="locationGrid" class="location-grid"></div>
+
+      <div class="connect-panel">
+        <div>
+          <p class="eyebrow">Website Routing Ready</p>
+          <h3>Website links can be connected for each location.</h3>
+          <p>Add each restaurant’s live URL inside <code>script.js</code>, then deploy to Vercel.</p>
+        </div>
+        <button id="copyConfig" class="button secondary" type="button">Copy Link Config</button>
+      </div>
+    </section>
+
+    <section id="strategy" class="strategy-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Group Platform</p>
+          <h2>Management at a glance</h2>
+        </div>
+      </div>
+
+      <div class="strategy-grid">
+        <article class="strategy-card">
+          <span class="icon">♜</span>
+          <h3>Brand Strategy</h3>
+          <p>Distinct concepts with clear identities, consistent positioning, and scalable presentation.</p>
+        </article>
+        <article class="strategy-card">
+          <span class="icon">◎</span>
+          <h3>Guest Experience</h3>
+          <p>Purpose-built touchpoints that help guests discover, remember, and revisit each location.</p>
+        </article>
+        <article class="strategy-card">
+          <span class="icon">⚙</span>
+          <h3>Operations</h3>
+          <p>A centralized digital layer for location visibility, menu routing, inquiries, and growth.</p>
+        </article>
+        <article class="strategy-card">
+          <span class="icon">↗</span>
+          <h3>Growth</h3>
+          <p>Investor-ready storytelling that supports expansion, partnerships, and long-term value.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div>
+        <p class="eyebrow">About the Preview</p>
+        <h2>Built for a clean white hospitality presentation.</h2>
+      </div>
+      <p>
+        This test build uses a white, bright, premium design system with interactive filters,
+        location cards, modal details, and placeholder outbound website buttons. It is ready to
+        deploy as a static Vercel project.
+      </p>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div>
+      <span class="brand-mark footer-mark">NN</span>
+      <p>No Name Hospitality Group</p>
+    </div>
+    <div>
+      <strong>Philadelphia, PA</strong>
+      <span>Serving guests across distinctive hospitality concepts.</span>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <a href="mailto:info@nonamehospitality.com">info@nonamehospitality.com</a>
+      <a href="tel:+15551234567">(555) 123-4567</a>
+    </div>
+  </footer>
+
+  <dialog id="detailsModal" class="details-modal">
+    <button id="closeModal" class="modal-close" type="button" aria-label="Close">×</button>
+    <img id="modalImage" alt="" />
+    <div class="modal-body">
+      <p id="modalKicker" class="eyebrow"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <a id="modalWebsite" class="button primary" target="_blank" rel="noopener">Visit Website</a>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Copied.</div>
+  <script src="./script.js"></script>
+</body>
+</html>
